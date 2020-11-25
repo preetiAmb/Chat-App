@@ -12,7 +12,7 @@
         <br>
         <input id="name" class="form-control" placeholder="Name"/>
         <br>
-        <Textarea id="message" class="form-control" placeholder="Messages"></Textarea>
+        <Textarea id="message" class="form-control" placeholder="Message"></Textarea>
         <br>
         <button id="send" class="btn btn-success">Send</button>
     </div>
@@ -29,12 +29,14 @@
         getMessages()    
     })
 
-    function addMessages(message){
+    socket.on('message', addMessage)
+
+    function addMessage(message){
         $("#messages").append(`<h4> ${message.name} </h4> <p> ${message.message} </p>`)
     }
     function getMessages() {
         $.get('http://localhost:3000/messages', (data) => {
-            data.forEach(addMessages)
+            data.forEach(addMessage)
         })
     }
     function postMessages(message) {
