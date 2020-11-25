@@ -5,4 +5,4 @@
 # socket.io asys
 # post messages
 # atlas mongoose
-# test driven development
+# Jasmine test driven development
