@@ -1,11 +1,11 @@
 # Chat-App
 
-1)run node serve.js
+- run node serve.js
 
-2)socket.io asys
+- socket.io asys
 
-3)post messages
+- post messages
 
-4)atlas mongoose
+- atlas mongoose
 
-5)Jasmine test driven development
+- Jasmine test driven development
